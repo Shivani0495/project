@@ -8,12 +8,13 @@ const FloatingContacts = () => {
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
-  const handleEmailClick = () => {
-    const email = 'kandukurishivani260@gmail.com'; // Replace with actual email
-    const subject = encodeURIComponent('Interior Design Inquiry');
-    const body = encodeURIComponent('Hi,\n\nI am interested in your interior design services. Could you please provide more information about your packages and process?\n\nThank you!');
-    window.open(`mailto:${email}?subject=${subject}&body=${body}`, '_blank');
-  };
+ const handleEmailClick = () => {
+  const email = 'kandukurishivani260@gmail.com';
+  const subject = encodeURIComponent('Interior Design Inquiry');
+  const body = encodeURIComponent('Hi,\n\nI am interested in your interior design services. Could you please provide more information about your packages and process?\n\nThank you!');
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+  window.open(gmailUrl, '_blank');
+};
 
   return (
     <div className="fixed bottom-6 right-6 z-30 flex flex-col space-y-4">
