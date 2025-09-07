@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
           {/* Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
   <img
-    src="./src/Assets/Logo.png"
+    src="https://static.vecteezy.com/system/resources/thumbnails/019/514/650/small_2x/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
     alt="Shivani Interior Logo"
     className="w-10 h-10 rounded-lg object-cover"
   />
