@@ -24,13 +24,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+91 98765 43210', '+91 87654 32109', 'Available 9 AM - 7 PM'],
+      details: ['+91 85550 88814', '+91 98483 02396', 'Available 9 AM - 7 PM'],
       color: 'text-green-600'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['hello@shivaniinterior.com', 'projects@shivaniinterior.com', 'We reply within 24 hours'],
+      details: ['hello@shivaniinterior.com', 'srinivas.charry.91@gmail.com', 'We reply within 24 hours'],
       color: 'text-amber-600'
     },
     {
