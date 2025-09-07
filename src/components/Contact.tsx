@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Our Studio',
-      details: ['123 Design Street', 'Mumbai, Maharashtra 400001', 'India'],
+      details: ['Rampally main road near Balaji function hall','ghatkesar road', 'Hyderabd 501301', 'India'],
       color: 'text-blue-600'
     },
     {
