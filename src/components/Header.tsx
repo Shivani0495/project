@@ -35,12 +35,13 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-            <div className="w-10 h-10 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
-              <Home className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-2xl font-bold text-gray-800">Shivani Interior</span>
-          </div>
-
+  <img
+    src="./src/Assets/Logo.png"
+    alt="Shivani Interior Logo"
+    className="w-10 h-10 rounded-lg object-cover"
+  />
+  <span className="text-2xl font-bold text-gray-800">Shivani Interior</span>
+</div>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
