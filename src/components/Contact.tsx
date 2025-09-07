@@ -18,7 +18,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Our Studio',
-      details: ['Rampally main road near Balaji function hall','ghatkesar road', 'Hyderabd 501301', 'India'],
+      details: ['Rampally main road near Balaji function hall Ghatkesar road', 'Hyderabd 501301', 'India'],
       color: 'text-blue-600'
     },
     {
