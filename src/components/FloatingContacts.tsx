@@ -3,13 +3,13 @@ import { MessageCircle, Mail } from 'lucide-react';
 
 const FloatingContacts = () => {
   const handleWhatsAppClick = () => {
-    const phoneNumber = '919182068560'; // Replace with actual WhatsApp number
+    const phoneNumber = '918555088814'; // Replace with actual WhatsApp number
     const message = encodeURIComponent('Hi! I am interested in your interior design services. Can we discuss my project?');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
  const handleEmailClick = () => {
-  const email = 'kandukurishivani260@gmail.com';
+  const email = 'srinivas.charry.91@gmail.com';
   const subject = encodeURIComponent('Interior Design Inquiry');
   const body = encodeURIComponent('Hi,\n\nI am interested in your interior design services. Could you please provide more information about your packages and process?\n\nThank you!');
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
