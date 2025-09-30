@@ -60,13 +60,13 @@ const Contact = () => {
       subject: formData.subject || `Interior Design Inquiry - ${formData.projectType}`,
       message: formData.message,
       project_type: formData.projectType,
-      to_email: 'kandukurishivani260@gmail.com'
+      to_email: 'srinivas.charry.91@gmail.com'
     };
 
     try {
       await emailjs.send(
         'service_jgs6n0g',      // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS template ID
+        'template_xiuyqhp',     // Replace with your EmailJS template ID
         templateParams,
         'PZzLjSwYfTcqvOmsO'       // Replace with your EmailJS public key
       );
