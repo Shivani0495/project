@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Search, ChevronDown, Home, Image, User, Mail } from 'lucide-react';
+import Logo from '../Assets/Logo.png'; // ✅ Local logo import
 
 interface HeaderProps {
   activeSection: string;
@@ -33,22 +34,26 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
     <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-40 transition-all duration-300">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => scrollToSection('home')}>
-  <img
-    src="https://static.vecteezy.com/system/resources/thumbnails/019/514/650/small_2x/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg"
-    alt="Shivani Interior Logo"
-    className="w-10 h-10 rounded-lg object-cover"
-  />
-  <span className="text-2xl font-bold text-gray-800">Shivani Interior</span>
-</div>
+          {/* ✅ Local Logo */}
+          <div
+            className="flex items-center space-x-2 cursor-pointer"
+            onClick={() => scrollToSection('home')}
+          >
+            <img
+              src={Logo}
+              alt="Shivani Interior Logo"
+              className="w-10 h-10 rounded-lg object-cover"
+            />
+            <span className="text-2xl font-bold text-gray-800">Shivani Interior</span>
+          </div>
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
               className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                activeSection === 'home' 
-                  ? 'text-amber-600 bg-amber-50' 
+                activeSection === 'home'
+                  ? 'text-amber-600 bg-amber-50'
                   : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
               }`}
             >
@@ -59,8 +64,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
             <button
               onClick={() => scrollToSection('gallery')}
               className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                activeSection === 'gallery' 
-                  ? 'text-amber-600 bg-amber-50' 
+                activeSection === 'gallery'
+                  ? 'text-amber-600 bg-amber-50'
                   : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
               }`}
             >
@@ -100,8 +105,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
             <button
               onClick={() => scrollToSection('about')}
               className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                activeSection === 'about' 
-                  ? 'text-amber-600 bg-amber-50' 
+                activeSection === 'about'
+                  ? 'text-amber-600 bg-amber-50'
                   : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
               }`}
             >
@@ -112,8 +117,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection, onSear
             <button
               onClick={() => scrollToSection('contact')}
               className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                activeSection === 'contact' 
-                  ? 'text-amber-600 bg-amber-50' 
+                activeSection === 'contact'
+                  ? 'text-amber-600 bg-amber-50'
                   : 'text-gray-700 hover:text-amber-600 hover:bg-amber-50'
               }`}
             >

@@ -3,37 +3,37 @@ import { Award, Users, Clock, Star, CheckCircle, Target } from 'lucide-react';
 
 // ✅ Import local images from src/Assets
 import SrinivasPic from '../Assets/Srinivas_Pic.jpg';
-import Shivani from '../Assets/Shivani.jpg'
+import Shivani from '../Assets/Shivani.jpg';
+import Kithen from '../Assets/Kithen.png'
 import Logo from '../Assets/Logo.png'; // Optional — used for “Our Story” image
 
 const About = () => {
   const achievements = [
-    { icon: Award, title: '25+ Awards', description: 'Recognition for design excellence' },
-    { icon: Users, title: '1000+ Clients', description: 'Happy customers worldwide' },
-    { icon: Clock, title: '15+ Years', description: 'Experience in interior design' },
-    { icon: Star, title: '4.9/5 Rating', description: 'Customer satisfaction score' }
+    { icon: Award, title: '25+ Awards', description: 'Recognition for design and innovation excellence' },
+    { icon: Users, title: '1000+ Clients', description: 'Trusted by happy customers across India' },
+    { icon: Clock, title: '20+ Years', description: 'Experience in interiors and CNC craftsmanship' },
+    
   ];
 
   const values = [
-    { icon: Target, title: 'Vision', description: 'To transform spaces into stunning environments that inspire and delight.' },
-    { icon: CheckCircle, title: 'Mission', description: 'Creating exceptional interior designs that reflect your unique style and personality.' },
-    { icon: Star, title: 'Values', description: 'Quality, creativity, integrity, and customer satisfaction in everything we do.' }
+    { icon: Target, title: 'Vision', description: 'To transform every space into an elegant, functional, and inspiring environment.' },
+    { icon: CheckCircle, title: 'Mission', description: 'Deliver world-class interior design and CNC solutions that blend art and technology.' },
+    { icon: Star, title: 'Values', description: 'Creativity, precision, transparency, and customer delight in every project we undertake.' }
   ];
 
   const teamMembers = [
     {
       name: 'Srinivas',
-      role: 'Founder',
-      image: SrinivasPic, // 👈 Using local asset
-      description: 'With over 20 years of experience, Srinivas brings creativity and expertise to every project.'
+      role: 'Founder & Creative Director',
+      image: SrinivasPic,
+      description: 'With over 20 years of experience, Srinivas leads the design and CNC innovation at Shivani Interiors, ensuring each project blends creativity and craftsmanship.'
     },
     {
       name: 'Shivani',
-      role: 'Website Designer',
+      role: 'Website Designer & Brand Strategist',
       image: Shivani,
-      description: 'Specializes in contemporary and modern design with attention to functional aesthetics.'
-    },
-   
+      description: 'Shivani focuses on digital design and brand presentation, helping clients visualize their dream interiors through modern aesthetics and seamless experience.'
+    }
   ];
 
   return (
@@ -45,7 +45,7 @@ const About = () => {
             About <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">Us</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We are passionate interior designers committed to creating beautiful, functional spaces that reflect your unique style and personality.
+            At Shivani Interiors, we craft timeless interiors and precision CNC designs that transform ordinary spaces into extraordinary experiences.
           </p>
         </div>
 
@@ -54,22 +54,22 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-800">Our Story</h3>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Founded in 2009, Shivani Interior has grown from a small design studio to a leading interior design company. 
-              Our journey began with a simple vision: to create spaces that not only look beautiful but also enhance the way people live and work.
+              Established in <strong>2005</strong>, Shivani Interiors started as a small design studio with a passion for creativity and perfection.
+              Over the years, we’ve grown into a full-fledged interior design and CNC solutions company, combining artistic vision with precision engineering.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Over the years, we've had the privilege of working with diverse clients, from homeowners looking to refresh their living spaces 
-              to businesses seeking to create inspiring work environments. Each project has taught us something new and helped us refine our craft.
+              We take pride in delivering high-quality interior transformations — from modern homes and offices to commercial establishments.
+              Our CNC services add a layer of innovation, allowing us to design intricate patterns, furniture details, and architectural elements with unmatched accuracy.
             </p>
             <div className="flex items-center space-x-4 pt-4">
               <div className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full"></div>
-              <span className="text-amber-600 font-semibold">Building Dreams Since 2009</span>
+              <span className="text-amber-600 font-semibold">Building Dreams Since 2005</span>
             </div>
           </div>
 
           <div className="relative">
             <img
-              src={Logo} // 👈 Optional local image for story section
+              src={Kithen}
               alt="Our design process"
               className="w-full rounded-2xl shadow-2xl"
               loading="lazy"
@@ -116,7 +116,7 @@ const About = () => {
         {/* Team Section */}
         <div>
           <h3 className="text-3xl font-bold text-gray-800 text-center mb-12">Meet Our Team</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
