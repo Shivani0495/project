@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LoadingScreen from './components/LoadingScreen';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
+import GalleryDetail from './components/GalleryDetail';
 import About from './components/About';
 import Contact from './components/Contact';
 import FloatingContacts from './components/FloatingContacts';
@@ -23,7 +25,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Smooth scrolling behavior
+    // Smooth scroll spy
     const handleScroll = () => {
       const sections = ['home', 'gallery', 'about', 'contact'];
       const scrollPosition = window.scrollY + 100;
@@ -43,42 +45,35 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
+  if (isLoading) return <LoadingScreen />;
 
   return (
-    <div className="min-h-screen bg-white">
+    <Router>
       <Header 
         activeSection={activeSection} 
         setActiveSection={setActiveSection}
         onSearchClick={() => setIsSearchOpen(true)}
       />
-      
+
       <main className="pt-16">
-        <section id="home">
-          <Hero />
-        </section>
-        
-        <section id="gallery">
-          <Gallery />
-        </section>
-        
-        <section id="about">
-          <About />
-        </section>
-        
-        <section id="contact">
-          <Contact />
-        </section>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <section id="home"><Hero /></section>
+              <section id="gallery"><Gallery /></section>
+              <section id="about"><About /></section>
+              <section id="contact"><Contact /></section>
+            </>
+          } />
+
+          {/* Gallery detail page */}
+          <Route path="/gallery/:category" element={<GalleryDetail />} />
+        </Routes>
       </main>
 
       <FloatingContacts />
-      
-      {isSearchOpen && (
-        <SearchModal onClose={() => setIsSearchOpen(false)} />
-      )}
-    </div>
+      {isSearchOpen && <SearchModal onClose={() => setIsSearchOpen(false)} />}
+    </Router>
   );
 }
 
