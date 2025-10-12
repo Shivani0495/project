@@ -1,6 +1,11 @@
 import React from 'react';
 import { Award, Users, Clock, Star, CheckCircle, Target } from 'lucide-react';
 
+// ✅ Import local images from src/Assets
+import SrinivasPic from '../Assets/Srinivas_Pic.jpg';
+import Shivani from '../Assets/Shivani.jpg'
+import Logo from '../Assets/Logo.png'; // Optional — used for “Our Story” image
+
 const About = () => {
   const achievements = [
     { icon: Award, title: '25+ Awards', description: 'Recognition for design excellence' },
@@ -17,23 +22,18 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: 'Shivani Sharma',
-      role: 'Founder & Lead Designer',
-      image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=400',
-      description: 'With over 15 years of experience, Shivani brings creativity and expertise to every project.'
+      name: 'Srinivas',
+      role: 'Founder',
+      image: SrinivasPic, // 👈 Using local asset
+      description: 'With over 20 years of experience, Srinivas brings creativity and expertise to every project.'
     },
     {
-      name: 'Rajesh Kumar',
-      role: 'Senior Interior Designer',
-      image: 'https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=400',
+      name: 'Shivani',
+      role: 'Website Designer',
+      image: Shivani,
       description: 'Specializes in contemporary and modern design with attention to functional aesthetics.'
     },
-    {
-      name: 'Priya Patel',
-      role: 'Project Manager',
-      image: 'https://images.pexels.com/photos/1181519/pexels-photo-1181519.jpeg?auto=compress&cs=tinysrgb&w=400',
-      description: 'Ensures seamless project execution from concept to completion with precision.'
-    }
+   
   ];
 
   return (
@@ -69,7 +69,7 @@ const About = () => {
 
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src={Logo} // 👈 Optional local image for story section
               alt="Our design process"
               className="w-full rounded-2xl shadow-2xl"
               loading="lazy"

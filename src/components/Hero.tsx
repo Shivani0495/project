@@ -16,6 +16,14 @@ const Hero = () => {
     { icon: Users, label: 'Happy Clients', value: '1000+' }
   ];
 
+  // 👇 Function to scroll smoothly to the contact section
+  const handleBookNowClick = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Background Carousel */}
@@ -43,7 +51,10 @@ const Hero = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                  <button className="group bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center">
+                  <button
+                    onClick={handleBookNowClick} // 👈 Scrolls to Contact
+                    className="group bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center"
+                  >
                     <span>Start Your Project</span>
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
@@ -73,7 +84,10 @@ const Hero = () => {
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Free Consultation</h3>
                 <p className="text-gray-600 mb-4">Get expert advice tailored to your space and budget. No obligations, just professional insights.</p>
-                <button className="text-amber-600 font-semibold hover:text-orange-600 transition-colors duration-200">
+                <button
+                  onClick={handleBookNowClick} // 👈 Scrolls to Contact
+                  className="text-amber-600 font-semibold hover:text-orange-600 transition-colors duration-200"
+                >
                   Book Now →
                 </button>
               </div>
