@@ -23,7 +23,7 @@ const galleryItems = [
     id: 'kidsroom',
     title: 'Kids Room',
     image:
-      'https://cdn-dliin.nitrocdn.com/iFaxlHcVqyWZWghwsjNiQOatlfNsVALG/assets/images/source/rev-b13ef66/dlifeinteriors.com/wp-content/uploads/2020/10/Kids-room-bunk-bed-design-in-Coimbatore.jpg',
+      'https://media.istockphoto.com/id/1256104370/photo/boy-sleeping-and-dreaming-a-future-in-the-space.jpg?s=612x612&w=0&k=20&c=OC0lwRToifkKRhAYGVRoWI8kFyqGcerGdaKV6FWItfg=',
   },
   {
     id: 'dining',
