@@ -17,8 +17,8 @@
     const contactInfo = [
       {
         icon: MapPin,
-        title: 'Visit Our Studio',
-        details: ['Rampally main road near Balaji function hall Ghatkesar road', 'Hyderabd 501301', 'India'],
+        title: 'Visit Our Shop',
+        details: ['Plot No. 12, near Bharath petrol bunk, Rampally', 'Secunderabad, Telangana 501302', 'India'],
         color: 'text-blue-600'
       },
       {
@@ -30,7 +30,7 @@
       {
         icon: Mail,
         title: 'Email Us',
-        details: ['hello@shivaniinterior.com', 'srinivas.charry.91@gmail.com', 'We reply within 24 hours'],
+        details: [ 'srinivas.charry.91@gmail.com', 'We reply within 24 hours'],
         color: 'text-amber-600'
       },
       {

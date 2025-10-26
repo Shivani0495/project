@@ -16,11 +16,19 @@ const Hero = () => {
     { icon: Users, label: 'Happy Clients', value: '1000+' }
   ];
 
-  // 👇 Function to scroll smoothly to the contact section
+  // Scroll smoothly to Contact section
   const handleBookNowClick = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Scroll smoothly to Gallery section
+  const handleViewPortfolioClick = () => {
+    const gallerySection = document.getElementById('gallery');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -52,14 +60,17 @@ const Hero = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-12">
                   <button
-                    onClick={handleBookNowClick} // 👈 Scrolls to Contact
+                    onClick={handleBookNowClick} // Scrolls to Contact
                     className="group bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center"
                   >
                     <span>Start Your Project</span>
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                   
-                  <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-gray-800">
+                  <button
+                    onClick={handleViewPortfolioClick} // Scrolls to Gallery
+                    className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-gray-800"
+                  >
                     View Portfolio
                   </button>
                 </div>
@@ -85,7 +96,7 @@ const Hero = () => {
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">Free Consultation</h3>
                 <p className="text-gray-600 mb-4">Get expert advice tailored to your space and budget. No obligations, just professional insights.</p>
                 <button
-                  onClick={handleBookNowClick} // 👈 Scrolls to Contact
+                  onClick={handleBookNowClick} // Scrolls to Contact
                   className="text-amber-600 font-semibold hover:text-orange-600 transition-colors duration-200"
                 >
                   Book Now →
