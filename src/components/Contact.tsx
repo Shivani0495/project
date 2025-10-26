@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
         'India',
       ],
       color: 'text-blue-600',
-      link: 'https://maps.app.goo.gl/oPGNEkxcwxBiF7b69',
+      link: 'https://maps.app.goo.gl/AQzYkXzzZxbWFw1c7',
     },
     {
       icon: Phone,
